@@ -1,0 +1,21 @@
+[package]
+name = "disc-over"
+version = "0.1.0"
+edition = "2021"
+description = "Disc-over: phone app and desktop Companion share this Tauri shell"
+
+[lib]
+name = "disc_over_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+discover-core = { path = "../crates/discover-core" }
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+rusqlite.workspace = true

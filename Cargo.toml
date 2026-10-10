@@ -1,0 +1,14 @@
+[workspace]
+resolver = "2"
+members = ["crates/discover-core", "src-tauri"]
+# The Tauri shell needs the platform webview to compile; the core does not.
+# `cargo test` at the root runs the core alone, so it works on any machine.
+default-members = ["crates/discover-core"]
+
+[workspace.dependencies]
+rusqlite = { version = "0.31", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+uuid = { version = "1", features = ["v7"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }

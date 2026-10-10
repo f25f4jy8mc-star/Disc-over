@@ -1,0 +1,12 @@
+[package]
+name = "discover-core"
+version = "0.1.0"
+edition = "2021"
+description = "Disc-over data model, shared by the phone app and the Companion"
+
+[dependencies]
+rusqlite.workspace = true
+serde.workspace = true
+anyhow.workspace = true
+uuid.workspace = true
+chrono.workspace = true
